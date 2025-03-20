@@ -12,6 +12,7 @@ export default async function handle(req, res) {
   } catch (error) {
     console.error(error);
   }
+  
   const postId = req.query.id;
   const post = await prisma.post.update({
     where: { id: postId },
